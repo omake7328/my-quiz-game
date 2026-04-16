@@ -1,11 +1,24 @@
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>簡単クイズ</title>
+</head>
+<body>
+    <h1>GitHubクイズ！</h1>
+    <p>Q. GitHubの公式マスコットの名前は何？</p>
+    
+    <button onclick="checkAnswer('A')">A. オクトキャット</button>
+    <button onclick="checkAnswer('B')">B. ギットドッグ</button>
 
-function draw() {
-  background(46, 204, 113); // 画面を緑色にする
-  fill(255);
-  textAlign(CENTER, CENTER);
-  textSize(32);
-  text("GitHub連携テスト成功！", width/2, height/2);
-}
+    <script>
+        function checkAnswer(choice) {
+            if (choice === 'A') {
+                alert("正解！猫とタコが合体したキャラクターだよ！");
+            } else {
+                alert("残念！正解はオクトキャットでした。");
+            }
+        }
+    </script>
+</body>
+</html>
